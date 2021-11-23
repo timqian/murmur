@@ -58,3 +58,9 @@ Any database support key value storage and users can query the keys is capable.
   "upvotes": ""
 }]
 ```
+
+### frontend script
+
+1. render comment box
+1. get comments from API
+1. render comments
