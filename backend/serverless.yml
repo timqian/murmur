@@ -1,0 +1,13 @@
+component: http
+name: serverless-comment-api
+
+inputs:
+  src: ./
+  faas:
+    runtime: Nodejs12.16
+    framework: express
+    name: ${name}
+  apigw:
+    protocols:
+      - http
+      - https

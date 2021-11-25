@@ -2,12 +2,10 @@
   "name": "serverless-comment",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.js",
+  "main": "backend/server.js",
   "type": "module",
   "scripts": {
-    "startBackend": "nodemon src/server.js",
-    "startFrontend": "cd frontend && vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vite"
   },
   "repository": {
     "type": "git",
@@ -20,14 +18,11 @@
     "url": "https://github.com/timqian/serverless-comment/issues"
   },
   "homepage": "https://github.com/timqian/serverless-comment#readme",
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.41.0",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "nanoid": "^3.1.30"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.15",
+    "timeago.js": "^4.0.2",
+    "axios": "^0.24.0",
+    "gravatar-url": "^4.0.1",
+    "sass": "^1.43.4",
     "vite": "^2.6.14"
   }
 }

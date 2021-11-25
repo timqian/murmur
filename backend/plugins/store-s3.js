@@ -1,14 +1,6 @@
-import {
-  CopyObjectCommand,
-  DeleteObjectCommand,
-  GetObjectCommand,
-  HeadObjectCommand,
-  PutObjectCommand,
-  S3Client,
-  S3,
-} from '@aws-sdk/client-s3'
-import dotenv from 'dotenv'
-import { nanoid } from 'nanoid'
+const { S3 } = require('@aws-sdk/client-s3')
+const dotenv = require('dotenv')
+const { nanoid } = require('nanoid')
 
 dotenv.config()
 
@@ -30,8 +22,7 @@ const bucket = process.env.STORE_BUCKET
  * @param {String} after - Where you want S3 to start listing from
  * @returns Array of URIs
  */
-
-export async function getURIs({ after }) {
+async function getURIs({ after }) {
   const { Contents } = await client.listObjectsV2({
     Bucket: bucket,
     StartAfter: after
@@ -40,7 +31,7 @@ export async function getURIs({ after }) {
   return Contents.map(c => c.Key);
 }
 
-export async function getCommentsOfURI({ uri }) {
+async function getCommentsOfURI({ uri }) {
 
   // ref: https://stackoverflow.com/a/36944450/4674834
   const data = await new Promise(async (resolve, reject) => {
@@ -71,7 +62,7 @@ export async function getCommentsOfURI({ uri }) {
   return jsonComment;
 }
 
-export async function addComment({ uri, ...comment }) {
+async function addComment({ uri, ...comment }) {
 
   const currentComments = await getCommentsOfURI({ uri })
     .catch(e => console.log('uri not found')) || [];
@@ -93,7 +84,7 @@ console.log(currentComments)
   return comment
 }
 
-export async function deleteComment({ uri, id }) {
+async function deleteComment({ uri, id }) {
   const currentComponents = await getCommentsOfURI({ uri })
     .catch(e => console.log('uri not found')) || [];
 
@@ -111,11 +102,11 @@ export async function deleteComment({ uri, id }) {
   return newComponents;
 }
 
-export async function dumpComment() {
+async function dumpComment() {
 
 }
 
-export default {
+module.exports = {
   getURIs,
   getCommentsOfURI,
   addComment,

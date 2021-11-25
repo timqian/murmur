@@ -1,15 +1,14 @@
-# serverless-comment
+# MurMur
+
+A serverless comment system
 
 ## Features
 
-- Serverless & self deployable
-
-- Open source
-
-- Modulized, so that personalized. you deside 
-  - where to store data
-  - how users get notified
-  - where you deploy this service
+- Serverless & Self-deployable
+- Customizable, you deside 
+  - Where to store data
+  - How you deploy this service
+  - How to get notified
 
 ## Design
 

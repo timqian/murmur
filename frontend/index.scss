@@ -1,0 +1,94 @@
+#respond input[type='text'],
+#respond input[type='email'],
+#respond textarea {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  // border-radius: 5px;
+  line-height: 2em;
+  margin-bottom: 10px;
+}
+
+#respond textarea {
+  display: block;
+  width: 100%;
+  box-sizing:border-box;
+}
+
+#author-boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#author-boxes input {
+  width: 48%;
+}
+
+
+.friend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.friend img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.friend h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.friend p {
+  margin: 0;
+  padding: 0.1em;
+  font-size: 1em;
+}
+
+.friend strong {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+
+/* CSS for submit btn*/
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 20px;
+  width: 100%;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
