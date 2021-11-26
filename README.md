@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://murmur.moe">
-    <img src="https://user-images.githubusercontent.com/5512552/143563101-ac3dcbac-7562-40e7-9c03-d4676d547d60.png" width="100">
+    <img src="https://user-images.githubusercontent.com/5512552/143563741-d4b6006a-3018-49dc-afe7-d07e4bbf205b.png" width="100">
   </a>
 <p align="center"><strong>A serverless, customizable comment system</strong></p>
 </p>
