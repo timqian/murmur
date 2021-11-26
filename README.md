@@ -1,8 +1,9 @@
-[![murmur.moe](https://user-images.githubusercontent.com/5512552/143559712-46274e9c-9415-4741-bebe-89a9c586cb04.png)](https://murmur.moe)
-
-<h4 align="center">A serverless, customizable comment system</h4>
-
-
+<p align="center">
+  <a href="https://murmur.moe">
+    <img src="https://user-images.githubusercontent.com/5512552/143560405-c45e36ec-7318-4f84-b4ae-2b68f300057a.png" width="256">
+    <h3 align="center">A serverless, customizable comment system</h3>
+  </a>
+</p>
 
 ## Features
 
