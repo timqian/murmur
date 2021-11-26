@@ -16,7 +16,7 @@
   - 💾 Where to store data
   - 💅 How the comments look like
   - ⚡️ How you deploy this service
-  - ✉️ How to get notified
+  - 🔔️ How to get notified
 
 ## Usage
 
