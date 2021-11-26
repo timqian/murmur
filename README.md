@@ -1,4 +1,4 @@
-[![murmur.moe](https://user-images.githubusercontent.com/5512552/143557455-76f70985-7f03-4335-bad6-aead3d2709a4.png)](https://murmur.moe)
+[![murmur.moe](https://user-images.githubusercontent.com/5512552/143559287-953368af-4211-4e2f-8f75-47ff6345d36f.png)](https://murmur.moe)
 
 A serverless, customizable comment system
 
