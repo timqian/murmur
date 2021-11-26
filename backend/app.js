@@ -5,26 +5,26 @@ const path = require('path')
 const app = express()
 
 app.use(cors())
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use(express.static('public'))
+// app.use(express.static('public'))
 
 // Admin pannel
 app.get('/', async (req, res) => {
-  res.sendFile(path.join(__dirname, './index.html'));
+  res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
 // Get all URIs
 app.get('/URIs', async (req, res) => {
   const URIs = await store.getURIs({
     after: req.query.after,
-  });
-  res.send(URIs);
+  })
+  res.send(URIs)
 })
 
 // Get comments of URI
 app.get('/comments', async (req, res) => {
-  const { uri } = req.query;
+  const { uri } = req.query
   console.log(uri)
   try {
     const commentsOfURI = await store.getCommentsOfURI({ uri })
@@ -44,7 +44,7 @@ app.put('/comment', async (req, res) => {
 })
 
 app.delete('/comment', async (req, res) => {
-  const {id, uri} = req.query;
+  const {id, uri} = req.query
   console.log(uri, id)
   await store.deleteComment({uri, id})
   res.send('ok')

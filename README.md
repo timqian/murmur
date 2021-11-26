@@ -1,65 +1,32 @@
-# MurMur
+# [murmur](https://murmur.moe)
 
-A serverless comment system
+A serverless, customizable comment system
 
 ## Features
 
 - Serverless & Self-deployable
-- Customizable, you deside 
-  - Where to store data
-  - How you deploy this service
-  - How to get notified
+- Fully customizable, you decide
+  - 💾 Where to store data
+  - 💅 How the comments look like
+  - ⚡️ How you deploy this service
+  - ✉️ How to get notified
 
-## Design
+### Usage
 
-1. server:
-
-### API
-  1. GET comments
-  2. POST comments
-  3. LIST URIs
-
-### Dashboard
-  Manage comments
-
-
-2. database
-
-Any database support key value storage and users can query the keys is capable.
-
-  1. PUT key & value
-  1. GET key & value
-  1. GET all keys
-  1. DEL key & value
-
-3. notification
-
-  1. How to notify users when there is a reply
-  1. How to notify admin when there is a reply
-
-
-### How to deploy to tencent cloud
-
-1. Create bucket: https://console.cloud.tencent.com/cos5/bucket (not possible 因为 bucket name 会带上用户 ID)
-
-### Comment structure
-
-
-#### Comments for a URI
-```json
-[{
-  "id": "",
-  "parentId": "",
-  "content": "",
-  "author": "",
-  "email": "",
-  "link": "",
-  "upvotes": ""
-}]
+#### 1. Add murmur `css` and `js` to the `<head>`
+```html
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/murmur.moe@0/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/murmur.moe@0/dist/murmur.umd.js"></script>
+</head>
 ```
 
-### frontend script
-
-1. render comment box
-1. get comments from API
-1. render comments
+#### 2. Embed murmur to the place you want to display comments
+```html
+<body>
+	<div id="murmur.moe" host=""></div>
+  <!--
+  <div id="murmur.moe" host="https://URL-of-your-murmur-api.com"></div>
+  -->
+</body>
+```

@@ -1,30 +1,27 @@
 {
-  "name": "serverless-comment",
-  "version": "1.0.0",
-  "description": "",
-  "main": "backend/server.js",
-  "type": "module",
+  "name": "murmur.moe",
+  "version": "0.0.1",
+  "description": "A serverless comment system",
+  "main": "dist/murmur.es.js",
   "scripts": {
     "start": "vite",
     "build": "vite build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timqian/serverless-comment.git"
+    "url": "git+https://github.com/timqian/murmur.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["comment-system"],
+  "author": "timqian",
+  "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/timqian/serverless-comment/issues"
+    "url": "https://github.com/timqian/murmur/issues"
   },
-  "homepage": "https://github.com/timqian/serverless-comment#readme",
+  "homepage": "https://github.com/timqian/murmur#readme",
   "devDependencies": {
     "axios": "^0.24.0",
     "gravatar-url": "^4.0.1",
-    "sass": "^1.43.4",
     "timeago.js": "^4.0.2",
-    "vite": "^2.6.14",
-    "vite-plugin-singlefile": "^0.5.1"
+    "vite": "^2.6.14"
   }
 }

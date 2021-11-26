@@ -1,5 +1,5 @@
 component: http
-name: serverless-comment-api
+name: murmur-api
 
 inputs:
   src: ./

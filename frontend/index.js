@@ -1,18 +1,18 @@
-import './index.css'
+import './style.css'
 import axios from 'axios'
 import gravatarUrl from 'gravatar-url'
 import { format } from 'timeago.js'
 
 const URI = window.location.href.split("#")[0]
-const mainDiv = document.getElementById('murmur-comments')
+const mainDiv = document.getElementById('murmur.moe')
 const murmurHost = mainDiv.getAttribute('host')
 const http = axios.create({ baseURL: murmurHost })
 
-mainDiv.insertAdjacentHTML('beforeend', '<div id="murmur-comments-respond"></div>')
-mainDiv.insertAdjacentHTML('beforeend', '<div id="murmur-comments-earlier-comments"></div>')
+mainDiv.insertAdjacentHTML('beforeend', '<div id="murmur.moe-respond"></div>')
+mainDiv.insertAdjacentHTML('beforeend', '<div id="murmur.moe-earlier-comments"></div>')
 
-const respond = document.getElementById('murmur-comments-respond')
-const earlierComments = document.getElementById('murmur-comments-earlier-comments')
+const respond = document.getElementById('murmur.moe-respond')
+const earlierComments = document.getElementById('murmur.moe-earlier-comments')
 
 respond.insertAdjacentHTML('beforeend', `
 <div id="respond">
