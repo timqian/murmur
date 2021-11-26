@@ -2,7 +2,6 @@
 #respond input[type='email'],
 #respond textarea {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  // border-radius: 5px;
   line-height: 2em;
   margin-bottom: 10px;
 }

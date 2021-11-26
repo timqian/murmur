@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.css'
 import axios from 'axios'
 import gravatarUrl from 'gravatar-url'
 import { format } from 'timeago.js'
@@ -56,7 +56,7 @@ form.addEventListener('submit', async (e) => {
 async function renderComments() {
   earlierComments.innerHTML = ''
 
-  const res = await http.get(`/URI/${encodeURIComponent(URI)}`)
+  const res = await http.get(`/comments?uri=${encodeURIComponent(URI)}`)
   const commentsData = res.data
 
   const commentsHTMLs = commentsData.map(comment => {

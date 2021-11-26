@@ -1,19 +1,17 @@
 const express = require('express')
 const cors = require('cors')
 const store = require('./store.js')
-
+const path = require('path')
 const app = express()
 
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+app.use(express.static('public'))
 
 // Admin pannel
 app.get('/', async (req, res) => {
-  const URIs = await store.getURIs({
-    after: req.query.after,
-  });
-  res.send(URIs);
+  res.sendFile(path.join(__dirname, './index.html'));
 })
 
 // Get all URIs
@@ -25,8 +23,8 @@ app.get('/URIs', async (req, res) => {
 })
 
 // Get comments of URI
-app.get('/URI/:uri', async (req, res) => {
-  const { uri } = req.params;
+app.get('/comments', async (req, res) => {
+  const { uri } = req.query;
   console.log(uri)
   try {
     const commentsOfURI = await store.getCommentsOfURI({ uri })
@@ -45,9 +43,8 @@ app.put('/comment', async (req, res) => {
   res.send(comment)
 })
 
-app.delete('/comment/:uri', async (req, res) => {
-  const {uri} = req.params;
-  const {id} = req.query;
+app.delete('/comment', async (req, res) => {
+  const {id, uri} = req.query;
   console.log(uri, id)
   await store.deleteComment({uri, id})
   res.send('ok')
