@@ -1,6 +1,7 @@
 test
 .vercel
 .env.tencent
+.env.aws
 
 # Logs
 logs

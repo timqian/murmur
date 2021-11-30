@@ -10,6 +10,8 @@ app.use(express.json())
 
 // Admin pannel
 app.get('/', async (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate=59');
   res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
