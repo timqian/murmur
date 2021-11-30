@@ -7,7 +7,6 @@ const app = express()
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-// app.use(express.static('public'))
 
 // Admin pannel
 app.get('/', async (req, res) => {
@@ -25,7 +24,10 @@ app.get('/URIs', async (req, res) => {
 // Get comments of URI
 app.get('/comments', async (req, res) => {
   const { uri } = req.query
-  console.log(uri)
+  if (!uri) {
+    res.status(400).send('uri is required')
+    return
+  }
   try {
     const commentsOfURI = await store.getCommentsOfURI({ uri })
     res.send(commentsOfURI)
@@ -36,16 +38,23 @@ app.get('/comments', async (req, res) => {
 
 // Add/Edit comment 
 app.put('/comment', async (req, res) => {
-  const { uri, parentId, author, content, email, link, likes, timestamp } = req.body
+  const { uri, parentId, author, content, email, website, likes, timestamp } = req.body
+  if (!email || !author || !content) {
+    res.status(400).send('email, author and content are required')
+    return
+  }
   const comment = await store.addComment({
-    uri, parentId, content, author, email, link, likes, timestamp
+    uri, parentId, content, author, email, website, likes, timestamp
   })
   res.send(comment)
 })
 
 app.delete('/comment', async (req, res) => {
   const {id, uri} = req.query
-  console.log(uri, id)
+  if (!id || !uri) {
+    res.status(400).send('id and uri are required')
+    return
+  }
   await store.deleteComment({uri, id})
   res.send('ok')
 })

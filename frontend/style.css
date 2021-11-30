@@ -1,18 +1,28 @@
-#respond input[type='text'],
-#respond input[type='email'],
-#respond textarea {
+#murmur {
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
+/**
+ * CSS for comment box
+ */
+#murmur-form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+#murmur-form-content {
+  display: block;
+  width: 100%;
+  box-sizing:border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 2em;
   margin-bottom: 10px;
 }
 
-#respond textarea {
-  display: block;
-  width: 100%;
-  box-sizing:border-box;
-}
-
-#author-boxes {
+#murmur-form-author {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -20,12 +30,46 @@
   align-items: center;
 }
 
-#author-boxes input {
-  width: 48%;
+#murmur-form-name,
+#murmur-form-email,
+#murmur-form-website {
+  width: 32%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 2em;
+  margin-bottom: 10px;
 }
 
+#murmur-form-submit {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  padding: 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 20px;
+  width: 100%;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+}
 
-.friend {
+#murmur-form-submit:hover,
+#murmur-form-submit:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+/**
+ * CSS for comment list
+ */
+.murmur-comment {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -35,59 +79,41 @@
   margin-bottom: 1rem;
 }
 
-.friend img {
+.murmur-comment-details,
+.murmur-comment-meta {
+  margin: 0;
+  padding: 0;
+}
+
+
+.murmur-comment-avatar {
   width: 40px;
   height: 40px;
   margin-right: 10px;
   border-radius: 50%;
 }
 
-.friend h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.1em;
+.murmur-comment-author-name {
   font-weight: 700;
-  line-height: 1.2em;
+  font-size: 0.9em;
+  text-decoration: none;
 }
 
-.friend p {
+a.murmur-comment-author-name {
+  color: #0A66C2;
+}
+
+a.murmur-comment-author-name:hover {
+  color: #16437E;
+}
+
+.murmur-comment-time {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #666666;
+}
+
+.murmur-comment-content {
   margin: 0;
-  padding: 0.1em;
-  font-size: 1em;
-}
-
-.friend strong {
-  font-weight: 700;
-  font-size: 1.1em;
-}
-
-
-/* CSS for submit btn*/
-.button-18 {
-  align-items: center;
-  background-color: #0A66C2;
-  border: 0;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  font-size: 15px;
-  font-weight: 500;
-  justify-content: center;
-  line-height: 20px;
-  width: 100%;
-  min-height: 40px;
-  min-width: 0px;
-  overflow: hidden;
-  padding: 0px;
-  text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  user-select: none;
-}
-
-.button-18:hover,
-.button-18:focus { 
-  background-color: #16437E;
-  color: #ffffff;
+  padding: 5px 0;
 }

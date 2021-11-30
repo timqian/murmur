@@ -30,5 +30,5 @@
 #### 2. Add a `<div>` to the place you want to display comments
 
 ```html
-<div id="murmur.moe" host="https://murmur.moe"></div>
+<div id="murmur" host="https://murmur.moe"></div>
 ```
