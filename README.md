@@ -33,7 +33,7 @@
 <div id="murmur" host="https://api.murmur.moe"></div>
 ```
 
-You can change the `host` to use your owen backend.
+**Note**: You can change the `host` to use your owen backend.
 
 ## Deploy backend
 

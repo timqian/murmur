@@ -1,5 +1,6 @@
 test
 .vercel
+.env.tencent
 
 # Logs
 logs
