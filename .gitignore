@@ -2,6 +2,7 @@ test
 .vercel
 .env.tencent
 .env.aws
+.DS_Store
 
 # Logs
 logs
