@@ -37,7 +37,12 @@ You can change the `host` to use your owen backend.
 
 ## Deploy backend
 
-- Deploy to AWS
-- Deploy to Tencent cloud
-- Deploy to Vercel
-- Self deploy
+- [Deploy to AWS]()
+- [Deploy to Tencent cloud]()
+- [Deploy to Vercel]()
+- [Self-deploy]()
+
+## Contribute
+- [Write a store plugin]()
+- [Write a notification plugin]()
+- [Write a theme]()
