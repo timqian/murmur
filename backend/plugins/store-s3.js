@@ -13,6 +13,7 @@ const client = new S3({
     secretAccessKey: process.env.STORE_SECRET_KEY,
   },
   apiVersion: '2006-03-01',
+  signatureVersion: 'v4',
 })
 
 const bucket = process.env.STORE_BUCKET
