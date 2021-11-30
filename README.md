@@ -33,7 +33,9 @@
 <div id="murmur" host="https://murmur.moe"></div>
 ```
 
-## Deploy
+You can change the `host` to use your owen backend.
+
+## Deploy backend
 
 - Deploy to AWS
 - Deploy to Tencent cloud
