@@ -1,6 +1,6 @@
 {
   "name": "murmur.moe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A serverless comment system",
   "main": "dist/murmur.es.js",
   "scripts": {
