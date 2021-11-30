@@ -32,3 +32,10 @@
 ```html
 <div id="murmur" host="https://murmur.moe"></div>
 ```
+
+## Deploy
+
+- Deploy to AWS
+- Deploy to Tencent cloud
+- Deploy to Vercel
+- Self deploy
