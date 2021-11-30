@@ -30,7 +30,7 @@
 #### 2. Add a `<div>` to the place you want to display comments
 
 ```html
-<div id="murmur" host="https://murmur.moe"></div>
+<div id="murmur" host="https://api.murmur.moe"></div>
 ```
 
 You can change the `host` to use your owen backend.
