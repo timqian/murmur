@@ -37,6 +37,59 @@
 
 ## Deploy backend
 
+### Deploy to tencent cloud
+
+#### 1. Open this repo in [codespace]()
+#### 2. Add `.env` file in `backend` folder
+```bash
+STORE_PLUGIN=s3
+STORE_END_POINT=https://cos.ap-hongkong.myqcloud.com
+STORE_SECRET_ID=****
+STORE_SECRET_KEY=****
+
+## Choose a bucket
+STORE_BUCKET=serverless-comment-1303103251
+STORE_REGION=ap-hongkong
+SERVERLESS_PLATFORM_VENDOR=tencent
+```
+#### 3. Add `serverless.yml` file in `backend` folder
+```yaml
+# serverless.yml
+component: http
+name: serverless-comment-api
+inputs:
+  src: ./
+  faas:
+    runtime: Nodejs12.16
+    framework: express
+    name: ${name}
+  apigw:
+    protocols:
+      - http
+      - https
+```
+
+#### 4. Enter `backend` dir
+```bash
+cd backend
+```
+
+#### 5. Install `serverless` framework and Deploy
+```bash
+# Install serverless cli
+npm i serverless -g
+
+# Enter backend dir
+cd backend
+
+# Install dependencies
+npm install --production
+
+# Deploy to tencent scf
+serverless deploy
+```
+
+### Deploy to other cloud (TODO)
 - [Deploy to AWS]()
 - [Deploy to Tencent cloud]()
 - [Deploy to Vercel]()
