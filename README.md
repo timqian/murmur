@@ -11,7 +11,7 @@
 
 ## Deploy to tencent cloud
 
-```
+```bash
 # Install serverless cli
 npm i serverless -g
 # Deploy to tencent SCF
