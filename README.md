@@ -9,40 +9,12 @@
 
 <p></p>
 
-## Features
+## Deploy to tencent cloud
 
-- Serverless & Self-deployable
-- Fully customizable, you decide
-  - 💾 Where to store data
-  - 💅 How the comments look like
-  - ⚡️ How you deploy this service
-  - 🔔️ How to get notified
-
-## Usage
-
-#### 1. Add murmur style and script to the `<head>`
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/murmur.moe@0/style.css"/>
-<script defer src="https://cdn.jsdelivr.net/npm/murmur.moe@0/dist/murmur.umd.js"></script>
 ```
-
-#### 2. Add a `<div>` to the place you want to display comments
-
-```html
-<div id="murmur" host="https://api.murmur.moe"></div>
+# Install serverless cli
+npm i serverless -g
+# Deploy to tencent SCF
+cd backend
+serverless deploy
 ```
-
-**Note**: You can change the `host` to use your owen backend.
-
-## Deploy backend
-
-- [Deploy to AWS]()
-- [Deploy to Tencent cloud]()
-- [Deploy to Vercel]()
-- [Self-deploy]()
-
-## Contribute
-- [Write a store plugin]()
-- [Write a notification plugin]()
-- [Write a theme]()
