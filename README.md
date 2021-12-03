@@ -40,7 +40,7 @@
 ### Deploy to tencent cloud
 
 #### 1. Open this repo in codespace or clone it to your computer
-<img src="https://user-images.githubusercontent.com/5512552/144537250-f89d28f2-1cfd-4861-85a0-fe73fe471edf.png" width="100">
+<img src="https://user-images.githubusercontent.com/5512552/144537250-f89d28f2-1cfd-4861-85a0-fe73fe471edf.png" width="300">
 
 #### 2. Add `.env` file in `backend` folder
 ```bash
