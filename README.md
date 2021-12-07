@@ -37,7 +37,10 @@
 
 ## Deploy backend
 
-### Deploy to tencent cloud
+<details>
+  <summary>
+    <strong>Deploy to tencent cloud</strong>
+  </summary>
 
 #### 1. Open this repo in codespace or clone it to your computer
 <img src="https://user-images.githubusercontent.com/5512552/144537250-f89d28f2-1cfd-4861-85a0-fe73fe471edf.png" width="300">
@@ -90,14 +93,22 @@ npm install --production
 # Deploy to tencent scf
 serverless deploy
 ```
+</details>
 
-### Deploy to other cloud (TODO)
-- [Deploy to AWS]()
-- [Deploy to Tencent cloud]()
-- [Deploy to Vercel]()
-- [Self-deploy]()
+<details>
+  <summary>
+    <strong>Deploy to AWS(TODO)</strong>
+  </summary>
+</details>
 
-## Contribute
-- [Write a store plugin]()
-- [Write a notification plugin]()
-- [Write a theme]()
+<details>
+  <summary>
+    <strong>Deploy to Vercel(TODO)</strong>
+  </summary>
+</details>
+
+<details>
+  <summary>
+    <strong>Self-deploy</strong>
+  </summary>
+</details>
